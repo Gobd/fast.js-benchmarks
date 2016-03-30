@@ -7,12 +7,11 @@ It turns out the fastest way to loop through an array I found is to do this:
 var input = [1,2,3,4,5,6,7,8,9,10]
 var result = 0;
   for (var i=0, len=input.length; i<len; ++i) {
-    result += input[j];
+    result += input[i];
   }
   ```
 
   With this method the length is only calculated once on the first loop through rather than every time like if you did `i<input.length`, and for some reason doing `++i` runs faster than doing `i++`.
-
 
 Faster user-land reimplementations for several common builtin native JavaScript functions.
 
