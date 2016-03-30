@@ -14,8 +14,6 @@ var result = 0;
   With this method the length is only calculated once on the first loop through rather than every time like if you did `i<input.length`, and for some reason doing `++i` runs faster than doing `i++`.
 
 
-[![Build Status](https://travis-ci.org/codemix/fast.js.svg?branch=master)](https://travis-ci.org/codemix/fast.js)
-
 Faster user-land reimplementations for several common builtin native JavaScript functions.
 
 > Note: fast.js is very young and in active development. The current version is optimised for V8 (chrome / node.js) and may not perform well in other JavaScript engines, so you may not want to use it in the browser at this point. Please read the [caveats section](#caveats) before using fast.js.
