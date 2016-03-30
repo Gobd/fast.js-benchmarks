@@ -3,11 +3,13 @@
 I just cloned and modified this repo to test forEach vs for loop speed. To run tests to `npm install`, then `npm run bench`. You can un-comment lines in index.js in the bench folder to run more tests, and modify and add your own if you're curious about performance.
 
 It turns out the fastest way to loop through an array I found is to do this:
-`var input = [1,2,3,4,5,6,7,8,9,10]
+```javascript
+var input = [1,2,3,4,5,6,7,8,9,10]
 var result = 0;
   for (var i=0, len=input.length; i<len; ++i) {
     result += input[j];
-  }`
+  }
+  ```
 
   With this method the length is only calculated once on the first loop through rather than every time like if you did `i<input.length`, and for some reason doing `++i` runs faster than doing `i++`.
 
